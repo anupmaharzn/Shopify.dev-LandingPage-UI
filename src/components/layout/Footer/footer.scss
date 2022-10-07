@@ -1,0 +1,202 @@
+footer {
+	margin-top: auto;
+}
+.footer-top {
+	position: relative;
+	margin: 0 1.25rem;
+	padding-top: 64px;
+	padding-bottom: 64px;
+	background-color: var(--body-color-three);
+	border-radius: 1rem 1rem 0 0;
+}
+.grid {
+	max-width: 1268px;
+	margin: 0 auto;
+}
+.grid__item {
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.footer-subhead {
+	font-size: 0.75rem !important;
+	text-transform: none;
+	margin: 0 0 1rem;
+	letter-spacing: normal;
+}
+.footer-link {
+	display: block;
+	font-size: 0.875em;
+	padding: 0.375em 0;
+	color: var(--normal-font-color);
+	transition: color 300ms ease-in-out;
+	&:hover {
+		color: var(--bold-font-color);
+	}
+}
+.footer-link-twitch::before {
+	content: "";
+	float: left;
+	background-color: var(--normal-font-color);
+	-webkit-mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitch-4503960721a44bc55ff0e5061d1c0b19477d8cf51698db1a688ce796dde7a497.svg");
+	mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitch-4503960721a44bc55ff0e5061d1c0b19477d8cf51698db1a688ce796dde7a497.svg");
+	--webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	margin: 2px 8px 2px 0;
+	width: 16px;
+	height: 16px;
+}
+.footer-link-youtube::before {
+	content: "";
+	float: left;
+	background-color: var(--normal-font-color);
+	-webkit-mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/youtube-e1672f4ec6b07be386c1f2c664b9a8bf9d6b1612e5028a7c0c54468e70db8dab.svg");
+	mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/youtube-e1672f4ec6b07be386c1f2c664b9a8bf9d6b1612e5028a7c0c54468e70db8dab.svg");
+	--webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	margin: 2px 8px 2px 0;
+	width: 16px;
+	height: 16px;
+}
+.footer-link-twitter::before {
+	content: "";
+	float: left;
+	background-color: var(--normal-font-color);
+	-webkit-mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitter-91f2e94dd289e902dced03895746ea6bd583fe0254ebf61ea506e2a95ba9d862.svg");
+	mask-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitter-91f2e94dd289e902dced03895746ea6bd583fe0254ebf61ea506e2a95ba9d862.svg");
+	--webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	margin: 2px 8px 2px 0;
+	width: 16px;
+	height: 16px;
+}
+
+//boottom part
+.footer-bottom {
+	position: relative;
+	padding-bottom: 0;
+	padding-top: 0;
+	background-color: var(--body-color-four);
+	border-radius: 0 0 1rem 1rem;
+	margin-bottom: 0.25rem;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.grid--vertically--centered {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.footer-nav {
+	border-bottom: none;
+	margin-bottom: 0;
+	a {
+		border-bottom: none;
+
+		font-family: "Inter", sans-serif;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: #6d7175;
+		margin-right: 1em;
+		display: inline-block;
+		transition: color 300ms ease-in-out;
+		&:hover {
+			color: var(--bold-font-color);
+		}
+	}
+}
+.footer-nav__list {
+	display: inline-block;
+	margin-bottom: 0;
+}
+.footer-nav__list-item {
+	display: inline-block;
+}
+//media query
+@supports (display: flow-root) {
+	.grid {
+		display: flow-root;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.grid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.grid__item {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.footer-subhead {
+		font: 600 0.875rem/1rem "Inter";
+	}
+	.footer-top--list {
+		margin-bottom: 0;
+	}
+}
+@media screen and (min-width: 960px) {
+	.grid__item-desktop-up-2 {
+		width: 16.6666666667%;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 959.98px) {
+	.grid__item--tablet-up-third {
+		width: 33.3333333333%;
+	}
+}
+@media screen and (max-width: 639.98px) {
+	.grid__item--mobile-up-half {
+		width: 50%;
+	}
+}
+@media screen and (min-width: 640px) {
+	.footer-nav {
+		a {
+			line-height: 70px;
+			transition-property: border-color, fill;
+			transition-duration: 300ms;
+		}
+	}
+}
+
+@media screen and (max-width: 1279.98px) {
+	.footer-bottom {
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+}
+@media screen and (max-width: 959.98px) {
+	.footer-top,
+	.footer-bottom {
+		margin: 0;
+	}
+	.grid {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+	.footer-top--list {
+		margin-bottom: 32px;
+	}
+	.footer-subhead {
+		font: 600 0.875rem/1rem "Inter";
+	}
+}
+
+@media screen and (max-width: 639.98px) {
+	.footer-nav {
+		padding-top: 32px;
+		text-align: center;
+		padding-bottom: 1.5625em;
+	}
+}

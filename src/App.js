@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import BannerSection from './components/Home/BannerSection/BannerSection';
+import CommunitySection from './components/Home/CommunitySection/CommunitySection';
+import HeroSection from './components/Home/HeroSection/HeroSection';
+import Footer from './components/layout/Footer/Footer';
+import Header from './components/layout/Header/Header';
 
+import './scss/main.scss';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <HeroSection />
+      <BannerSection />
+      <CommunitySection />
+      <Footer />
+    </React.Fragment>
   );
 }
 

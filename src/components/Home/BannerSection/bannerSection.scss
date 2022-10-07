@@ -1,0 +1,151 @@
+.bannersection {
+	height: 100%;
+	border-radius: 1rem;
+	color: var(--normal-font-color);
+	--horizontalPadding: 2rem;
+	--horizontalMargin: 1.25rem;
+	margin: 0 var(--horizontalMargin);
+	padding: 4rem var(--horizontalPadding);
+	background-color: var(--body-color-two);
+}
+.bannersection--container {
+	--column: 1fr 1fr;
+	--gap: 4rem;
+	gap: var(--gap);
+	display: grid;
+	grid-template-columns: var(--column);
+	align-items: self-start;
+	max-width: 1268px;
+	margin: 0 auto;
+	padding: 0;
+}
+.bannersection-content {
+	h2,
+	h3 {
+		color: var(--bold-font-color);
+	}
+}
+.bannersection--heading {
+	font-kerning: normal;
+	font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
+	display: block;
+	letter-spacing: -0.0207142857em;
+}
+.body-paragraph {
+	margin-bottom: 0 !important;
+}
+.bannersection-status-box {
+	--columns: 1fr;
+	--padding: 5rem 4rem;
+	display: grid;
+	grid-template-columns: var(--columns);
+	place-self: end;
+	--maxWidth: 400px;
+	max-width: var(--maxWidth);
+	padding: var(--padding);
+	border: 3px solid #000000;
+	background-color: var(--body-color-three);
+	box-shadow: 9px 9px 0 0 #000000;
+}
+.bannersection-status-box--items {
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	gap: 1.5rem;
+	align-items: center;
+	font: 400 0.875rem/1.25rem "Inter";
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
+}
+.status-box--heading {
+	display: block;
+	color: var(--bold-font-color);
+	margin-bottom: 0;
+}
+
+.status-box--icon {
+	position: relative;
+}
+.status-box--helper {
+	position: absolute;
+	bottom: -8px;
+	right: 0;
+	font: 400 0.875rem/1.25rem "JetBrains Mono";
+	font-weight: 600;
+	color: var(--bold-font-color);
+}
+
+//media query
+@media screen and (min-width: 960px) {
+	.bannersection--heading {
+		font: 600 2rem/2.5rem "inter";
+	}
+	h3:not([class]) {
+		font: 600 1.25rem/1.5rem "Inter";
+		margin-bottom: 0.8333333333em;
+	}
+	.status-box--heading {
+		font: 600 1rem/1.25rem "Inter";
+	}
+}
+@media screen and (min-width: 640px) and (max-width: 959.98px) {
+	.bannersection--heading {
+		font: 600 1.5rem/1.75rem "inter";
+	}
+	h3:not([class]) {
+		font: 600 1.125rem/1.25rem "Inter";
+		margin-bottom: 0.9em;
+	}
+	.status-box--heading {
+		font: 600 1rem/1.25rem "Inter";
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.bannersection {
+		--horizontalMargin: auto;
+		width: fit-content;
+	}
+	.bannersection--container {
+		--column: 1fr;
+		--gap: 2rem;
+		max-width: 640px;
+	}
+	.bannersection-status-box {
+		--columns: 1fr 1fr;
+		--padding: 1.5rem 2rem;
+		--maxWidth: 100%;
+		place-self: unset;
+	}
+}
+@media screen and (max-width: 959.98px) {
+	.bannersection {
+		--horizontalMargin: 1.25rem;
+		width: unset;
+	}
+	.bannersection-status-box--items {
+		margin-right: 1rem;
+	}
+}
+@media screen and (max-width: 639.98px) {
+	.bannersection {
+		--horizontalPadding: 1rem;
+		--horizontalMargin: 0;
+	}
+	.bannersection--heading {
+		font: 600 1.5rem/1.75rem "inter";
+	}
+	.bannersection-status-box {
+		--columns: 1fr;
+	}
+	.bannersection-status-box--items {
+		margin-right: 0;
+	}
+	h3:not([class]) {
+		font: 600 1.125rem/1.25rem "Inter";
+		margin-bottom: 0.75rem;
+	}
+	.status-box--heading {
+		font: 600 1rem/1.25rem "Inter";
+	}
+}
