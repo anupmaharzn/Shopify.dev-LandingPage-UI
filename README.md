@@ -1,1 +1,1 @@
-##shopify.dev frontend landgin page Challenge
+##shopify.dev frontend landing page Challenge
